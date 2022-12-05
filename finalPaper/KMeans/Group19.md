@@ -3,14 +3,11 @@
 ## Overview
 
 k-Means Clustering is a topic that falls under Machine Learning. To give some context, there are different types of machine learning algorithms such as:
-**Supervised Machine Learning**
-**Unsupervised Machine Learning**
-**Semi-Supervised Machine Learning**
-**Reinforcement Learning**
+Supervised Machine Learning, Unsupervised Machine Learning, Semi-Supervised Machine Learning, and Reinforcement Learning
 
 The two main types, Supervised and Unsupervised Machine Learning are defined as the following:
-* Supervised: Algorithm that requires an input of data, and labels for classification. In the end, it is used to make predictions and classify data.
-* Unsupervised: Algorithm that requires only an input of data and no labels. It is used to understand the relationships between points in the dataset.
+* **Supervised:** Algorithm that requires an input of data, and labels for classification. In the end, it is used to make predictions and classify data.
+* **Unsupervised:** Algorithm that requires only an input of data and no labels. It is used to understand the relationships between points in the dataset.
 
 <img src="img/unsupervised-learning.png" width="600" height="300" />
 
