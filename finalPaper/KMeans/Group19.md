@@ -12,7 +12,7 @@ The two main types, Supervised and Unsupervised Machine Learning are defined as 
 * Supervised: Algorithm that requires an input of data, and labels for classification. In the end, it is used to make predictions and classify data.
 * Unsupervised: Algorithm that requires only an input of data and no labels. It is used to understand the relationships between points in the dataset.
 
-<img src="img/unsupervised-learning.png" width="300" height="600" />
+<img src="img/unsupervised-learning.png" width="600" height="300" />
 
 [1] In this image, the input data includes information with different animals without any labels for what they are; the unsupervised algorithm takes this input and groups the data into 3 different clusters based on how closely the data is related to one another
 
@@ -21,7 +21,7 @@ Applications are to either:
 1. confirm any assumptions about the types of groups that exist in the data
 2. identify unknown groups in the data
 
-<img src="img/kmeans.png" width="300" height="600" />
+<img src="img/kmeans.png" width="600" height="300" />
 
 * * *
 
