@@ -121,3 +121,6 @@ km.res <- kmeans(iris.scaled, 3, nstart = 10)
 
 fviz_cluster(km.res, iris[, -5], ellipse.type = "norm")
 ```
+The data visualization looks like the following:
+
+<img src="img/rkmeans.png" width="450" height="225" />
