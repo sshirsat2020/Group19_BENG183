@@ -1,5 +1,5 @@
 # Introduction to K-Means Clustering
-### By Shruti Shirsathe, Min-Son Tran, and Lily Steiner
+### By Shruti Shirsathe, Minh-Son Tran, and Lily Steiner
 ## Overview
 
 k-Means Clustering is a topic that falls under Machine Learning. To give some context, there are different types of machine learning algorithms such as:
@@ -32,3 +32,36 @@ Applications are to either:
 calculate the distances between all the points in the data and the centroids, then group the points with the cluster center they are closest to.
 5. Now we recalculate the centroid of these new clusters by finding the new center of gravity of the clusters; then group the data points to the new nearest centroid as we did before. 
 6. We then repeat these steps until the centroid positions remain the same; if so, the algorithm has completed and you’ve found your clusters.
+
+## Stopping Criteria
+As mentioned above, the algorithm typically terminates when centroid positions remain the same from one iteration to the next. In terms of the data, 
+this is equivalent to the all datapoints remaining within the same cluster after an iteration, as their center of gravity would remain the same.
+
+However, the algorithm is not guaranteed to reach this termination point (or convergence point). K-means clustering is designed to approximate local
+minima for the optimization of squared distances from centroids. It is not an exhaustive algorithm - the total number of clustering solutions is equivalent
+to the number of ways to partition n datapoints into k clusters. This is on the order of n to the k, in other words, extremely large. In certain edge cases, if
+centroid selection is nondeterministic for equal distances, the algorithm can oscillate between two solutions infinitely. As well as this, developers might
+see it fit to not run the algorithm for an excessively long time. Therefore, we can introduce a maximum iterations parameter as an additional stopping criterion.
+
+Summarily, we have 3 stopping criteria:
+
+1. Centroids do not move
+2. Clusters do not change
+3. Maximum iterations have been attempted
+
+## Algorithm in Practice
+
+We can visualize how the algorithm functions on the following dataset. We have 2 variables, X and Y, across 25 observations shown below. The dataset has been
+visualized as a 25 point scatterplot.
+
+
+Let's look at the first iteration of the algorithm
+1. Three centroids have been selected randomly from our dataset
+2. Datapoints are partitioned into clusters based on which centroid they are nearest to
+For a given datapoint $D$, the distance to a centroid $C$ is calculated by:
+$$dist = \sqrt{(D.x - C.x)^2 + (D.y - C.y)^2}$$
+3. Centroids move from their initial position to a new one, determined by the mean location of the datapoints within their cluster.
+For a given cluster of $n$ datapoints, the coordinate position of the new centroid is given by:
+$$\left( {{\displaystyle\sum_{1}^{n}D.x_n} \over n}, {{\displaystyle\sum_{1}^{n}D.y_n} \over n} \right)$$
+where $D.x_n$ and $D.y_n$ are the $x$ and $y$ coordinates of the $n^{th}$ datapoint respectively.
+4. We have our new centroids and are ready to iterate again
