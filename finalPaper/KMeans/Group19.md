@@ -135,5 +135,7 @@ The data visualization looks like the following:
 * * *
 ## References<a name="6"></a>
 [1]
+
 [2] https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+
 [3] https://rpkgs.datanovia.com/factoextra/reference/fviz_cluster.html
