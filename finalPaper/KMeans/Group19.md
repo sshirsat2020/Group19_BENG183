@@ -3,7 +3,8 @@
 3. [Stopping Criteria](#3)
 4. [Algorithm in Practice](#4)
 5. [Packages and Tools to Implement K Means](#5)
-6. [References](#6)
+6. [Real World Applications](#6)
+7. [References](#7)
 
 # Introduction to K-Means Clustering
 ### By Shruti Shirsathe, Minh-Son Tran, and Lily Steiner
@@ -137,7 +138,14 @@ The data visualization looks like the following:
 [4] Example from Factoextra
 
 * * *
-## References<a name="6"></a>
+## Real World Application<a name="6"></a>
+
+An example of using K-Means clustering is when large companies use it to efficiently sell a product to an identified customer group. The starting data comes from their customer ratings and preferences. A k means algorithm is run to group the customer base by their preferences and this gives deeper insight on what types of products they prefer. This allows companies to target their exact preferences and increase the likelyhood that the customers will buy the product sold to them.
+
+<img src="img/realworld.png" width="450" height="225" />
+
+* * *
+## References<a name="7"></a>
 
 [1] https://www.g2.com/articles/supervised-vs-unsupervised-learning
 
