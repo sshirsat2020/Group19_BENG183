@@ -4,7 +4,8 @@
 4. [Algorithm in Practice](#4)
 5. [Packages and Tools to Implement K Means](#5)
 6. [Real World Applications](#6)
-7. [References](#7)
+7. [Conclusion](#7)
+8. [References](#8)
 
 # Introduction to K-Means Clustering
 ### By Shruti Shirsathe, Minh-Son Tran, and Lily Steiner
@@ -139,13 +140,26 @@ The data visualization looks like the following:
 
 * * *
 ## Real World Application<a name="6"></a>
-
-An example of using K-Means clustering is when large companies use it to efficiently sell a product to an identified customer group. The starting data comes from their customer ratings and preferences. A k means algorithm is run to group the customer base by their preferences and this gives deeper insight on what types of products they prefer. This allows companies to target their exact preferences and increase the likelyhood that the customers will buy the product sold to them.
-
+<p align="center">
 <img src="img/realworld.png" width="450" height="225" />
+</p>
+
+An example of using K-Means clustering is when large companies use it to efficiently sell a product to an identified customer group. The starting data comes from their customer ratings and preferences. A k means algorithm is run to group the customer base by their preferences and this gives deeper insight on what types of products they prefer. This allows companies to target their exact preferences and increase the likelyhood that the customers will buy the product sold to them. By clustering customers together, companies can also predict the preferences of different customers depending on wether they are in the same cluster. If customer A and B are in the same cluster and customer B prefers a certain product, most likely company A will too because they are in the same cluster, and this way, companies and make reccommendations to customers based on other's preferences.
+
 
 * * *
-## References<a name="7"></a>
+## Conclusion<a name="7"></a>
+K-means is an unsupervised, iterative algorithm used to partition unlabeled data into distinct non-overlapping groups called clusters. It can confirm any assumptions about the types of groups that exist in the data or identify unknown groups in the data.
+
+Key Takeaways:
+1. Easy to use & computationally efficient 
+2. Assumes clusters have similar variance
+3. Assumes cluster are the same size (same radius) & similar number of points
+4. Assumes spherical shape of clusters 
+5. Need to predefine number of clusters
+
+* * *
+## References<a name="8"></a>
 
 [1] https://www.g2.com/articles/supervised-vs-unsupervised-learning
 
