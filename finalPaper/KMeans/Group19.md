@@ -76,3 +76,22 @@ Here are the second, third, and fourth iterations, though not to the same depth 
 <img src="img/iteration4.png" width="450" height="225" />
 
 Note that between the third and fourth iterations, none of our datapoints have moved into a new cluster. Therefore, we've satisfied our stopping criteria and the algorithm terminates. We've now successfully partitioned the 25 datapoints into one of either the red, green, or blue groups.
+
+* * *
+
+## Packages and Tools to Implement K Means
+Python → scikit-learn package
+
+```python
+from matplotlib import pyplot as plt
+from sklearn.cluster import KMeans
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(data)
+plt.scatter(s,x, c=kmeans.labels_)
+plt.show()
+```
+<img src="img/iteration2.png" width="450" height="225" />
+Optional params include: algorithm type, max iterations, seed count (and more)
+
+R → built-in function
+Output is a summary of the means, can further visualize clusters with fviz_cluster package
