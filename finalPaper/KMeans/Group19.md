@@ -17,17 +17,18 @@ Supervised Machine Learning, Unsupervised Machine Learning, Semi-Supervised Mach
 The two main types, Supervised and Unsupervised Machine Learning are defined as the following:
 * **Supervised:** Algorithm that requires an input of data, and labels for classification. In the end, it is used to make predictions and classify data.
 * **Unsupervised:** Algorithm that requires only an input of data and no labels. It is used to understand the relationships between points in the dataset.
-
+<p align="center">
 <img src="img/unsupervised-learning.png" width="600" height="300" />
-
+</p>
 [1] In this image, the input data includes information with different animals without any labels for what they are; the unsupervised algorithm takes this input and groups the data into 3 different clusters based on how closely the data is related to one another. Devin Pickell, "Supervised vs Unsupervised Learning – What's the Difference?"
 
 K-Means clustering is an unsupervised algorithm, meaning that the goal is to look for patterns in a dataset without pre-existing labels. 
 Applications are to either:
 1. confirm any assumptions about the types of groups that exist in the data
 2. identify unknown groups in the data
-
+<p align="center">
 <img src="img/kmeans.png" width="600" height="300" />
+</p>
 [2] Alan Jeffares, "K-means: A Complete Introduction"
 
 * * *
@@ -115,8 +116,9 @@ plt.show()
 
 We can plot our clusters through pyplot:
 
+<p align="center">
 <img src="img/scatter.png" width="450" height="225" />
-
+</p>
 ### R → built-in function
 
 Output is a summary of the means, can further visualize clusters with fviz_cluster package
@@ -134,8 +136,9 @@ km.res <- kmeans(iris.scaled, 3, nstart = 10)
 fviz_cluster(km.res, iris[, -5], ellipse.type = "norm")
 ```
 The data visualization looks like the following:
-
+<p align="center">
 <img src="img/rkmeans.png" width="450" height="225" />
+</p>
 [4] Example from Factoextra
 
 * * *
@@ -143,6 +146,7 @@ The data visualization looks like the following:
 <p align="center">
 <img src="img/realworld.png" width="450" height="225" />
 </p>
+[5] Pratik Kohad, "K-Means clustering and its Real World Use Case"
 
 An example of using K-Means clustering is when large companies use it to efficiently sell a product to an identified customer group. The starting data comes from their customer ratings and preferences. A k means algorithm is run to group the customer base by their preferences and this gives deeper insight on what types of products they prefer. This allows companies to target their exact preferences and increase the likelyhood that the customers will buy the product sold to them. By clustering customers together, companies can also predict the preferences of different customers depending on wether they are in the same cluster. If customer A and B are in the same cluster and customer B prefers a certain product, most likely company A will too because they are in the same cluster, and this way, companies and make reccommendations to customers based on other's preferences.
 
@@ -168,3 +172,5 @@ Key Takeaways:
 [3] https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 
 [4] https://rpkgs.datanovia.com/factoextra/reference/fviz_cluster.html
+
+[5] https://www.linkedin.com/pulse/k-means-clustering-its-real-world-use-case-pratik-kohad-1c/
