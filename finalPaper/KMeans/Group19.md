@@ -80,18 +80,44 @@ Note that between the third and fourth iterations, none of our datapoints have m
 * * *
 
 ## Packages and Tools to Implement K Means
-Python → scikit-learn package
+
+### Python → scikit-learn package
+
+The scikit learn package in python takes in parameters such as a number of clusters, an array containing your data, and random_state which indicates whether the user wants the initial centroids to be randomized. Optional params include: algorithm type, max iterations, seed count (and more). A sample implementation is shown in the cell below:
 
 ```python
-from matplotlib import pyplot as plt
 from sklearn.cluster import KMeans
-kmeans = KMeans(n_clusters=2)
-kmeans.fit(data)
+import numpy as np
+X = np.array([[1, 2], [1, 4], [1, 0],
+...               [10, 2], [10, 4], [10, 0]])
+kmeans = KMeans(n_clusters=2, random_state=0).fit(X)
+kmeans.labels_
+array([1, 1, 1, 0, 0, 0], dtype=int32)
+kmeans.predict([[0, 0], [12, 3]])
+array([1, 0], dtype=int32)
+kmeans.cluster_centers_
+array([[10.,  2.],
+       [ 1.,  2.]])
 plt.scatter(s,x, c=kmeans.labels_)
 plt.show()
 ```
-<img src="img/iteration2.png" width="450" height="225" />
-Optional params include: algorithm type, max iterations, seed count (and more)
+We can plot our clusters through pyplot:
 
-R → built-in function
+<img src="img/scatter.png" width="450" height="225" />
+
+### R → built-in function
+
 Output is a summary of the means, can further visualize clusters with fviz_cluster package
+```R
+set.seed(123)
+data("iris")
+head(iris)
+#>   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+#> 1          5.1         3.5          1.4         0.2  setosa
+#> 2          4.9         3.0          1.4         0.2  setosa
+#> 3          4.7         3.2          1.3         0.2  setosa
+
+km.res <- kmeans(iris.scaled, 3, nstart = 10)
+
+fviz_cluster(km.res, iris[, -5], ellipse.type = "norm")
+```
