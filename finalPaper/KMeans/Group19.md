@@ -7,7 +7,7 @@
 
 # Introduction to K-Means Clustering
 ### By Shruti Shirsathe, Minh-Son Tran, and Lily Steiner
-## Overview
+## Overview<a name="1"></a>
 
 k-Means Clustering is a topic that falls under Machine Learning. To give some context, there are different types of machine learning algorithms such as:
 Supervised Machine Learning, Unsupervised Machine Learning, Semi-Supervised Machine Learning, and Reinforcement Learning
@@ -29,7 +29,7 @@ Applications are to either:
 
 * * *
 
-## The Algorithm
+## The Algorithm<a name="2"></a>
 ![Algorithm](img/algorithm.png)
 
 1. Choose a value K as the number of cluster centers and set the cluster centers randomly. One way to choose K is by using the elbow method
@@ -40,7 +40,7 @@ calculate the distances between all the points in the data and the centroids, th
 5. Now we recalculate the centroid of these new clusters by finding the new center of gravity of the clusters; then group the data points to the new nearest centroid as we did before. 
 6. We then repeat these steps until the centroid positions remain the same; if so, the algorithm has completed and you’ve found your clusters.
 
-## Stopping Criteria
+## Stopping Criteria<a name="3"></a>
 As mentioned above, the algorithm typically terminates when centroid positions remain the same from one iteration to the next. In terms of the data, 
 this is equivalent to the all datapoints remaining within the same cluster after an iteration, as their center of gravity would remain the same.
 
@@ -56,7 +56,7 @@ Summarily, we have 3 stopping criteria:
 2. Clusters do not change
 3. Maximum iterations have been attempted
 
-## Algorithm in Practice
+## Algorithm in Practice<a name="4"></a>
 
 We can visualize how the algorithm functions on the following dataset. We have 2 variables, X and Y, across 25 observations shown below. The dataset has been
 visualized as a 25 point scatterplot.
@@ -86,7 +86,7 @@ Note that between the third and fourth iterations, none of our datapoints have m
 
 * * *
 
-## Packages and Tools to Implement K Means
+## Packages and Tools to Implement K Means<a name="5"></a>
 
 ### Python → scikit-learn package
 
@@ -133,7 +133,7 @@ The data visualization looks like the following:
 <img src="img/rkmeans.png" width="450" height="225" />
 
 * * *
-## References
+## References<a name="6"></a>
 [1]
 [2] https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 [3] https://rpkgs.datanovia.com/factoextra/reference/fviz_cluster.html
