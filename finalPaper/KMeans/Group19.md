@@ -18,7 +18,7 @@ The two main types, Supervised and Unsupervised Machine Learning are defined as 
 
 <img src="img/unsupervised-learning.png" width="600" height="300" />
 
-[1] In this image, the input data includes information with different animals without any labels for what they are; the unsupervised algorithm takes this input and groups the data into 3 different clusters based on how closely the data is related to one another
+[1] In this image, the input data includes information with different animals without any labels for what they are; the unsupervised algorithm takes this input and groups the data into 3 different clusters based on how closely the data is related to one another. Devin Pickell, "Supervised vs Unsupervised Learning – What's the Difference?"
 
 K-Means clustering is an unsupervised algorithm, meaning that the goal is to look for patterns in a dataset without pre-existing labels. 
 Applications are to either:
@@ -26,6 +26,7 @@ Applications are to either:
 2. identify unknown groups in the data
 
 <img src="img/kmeans.png" width="600" height="300" />
+[2] Alan Jeffares, "K-means: A Complete Introduction"
 
 * * *
 
@@ -108,6 +109,8 @@ array([[10.,  2.],
 plt.scatter(s,x, c=kmeans.labels_)
 plt.show()
 ```
+[3] Example from Scikit Learn
+
 We can plot our clusters through pyplot:
 
 <img src="img/scatter.png" width="450" height="225" />
@@ -131,11 +134,15 @@ fviz_cluster(km.res, iris[, -5], ellipse.type = "norm")
 The data visualization looks like the following:
 
 <img src="img/rkmeans.png" width="450" height="225" />
+[4] Example from Factoextra
 
 * * *
 ## References<a name="6"></a>
-[1]
 
-[2] https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+[1] https://www.g2.com/articles/supervised-vs-unsupervised-learning
 
-[3] https://rpkgs.datanovia.com/factoextra/reference/fviz_cluster.html
+[2] https://towardsdatascience.com/k-means-a-complete-introduction-1702af9cd8c
+
+[3] https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+
+[4] https://rpkgs.datanovia.com/factoextra/reference/fviz_cluster.html
