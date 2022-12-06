@@ -22,6 +22,7 @@ The two main types, Supervised and Unsupervised Machine Learning are defined as 
 </p>
 [1] In this image, the input data includes information with different animals without any labels for what they are; the unsupervised algorithm takes this input and groups the data into 3 different clusters based on how closely the data is related to one another. Devin Pickell, "Supervised vs Unsupervised Learning – What's the Difference?"
 
+
 K-Means clustering is an unsupervised algorithm, meaning that the goal is to look for patterns in a dataset without pre-existing labels. 
 Applications are to either:
 1. confirm any assumptions about the types of groups that exist in the data
@@ -147,6 +148,7 @@ The data visualization looks like the following:
 <img src="img/realworld.png" width="450" height="225" />
 </p>
 [5] Pratik Kohad, "K-Means clustering and its Real World Use Case"
+
 
 An example of using K-Means clustering is when large companies use it to efficiently sell a product to an identified customer group. The starting data comes from their customer ratings and preferences. A k means algorithm is run to group the customer base by their preferences and this gives deeper insight on what types of products they prefer. This allows companies to target their exact preferences and increase the likelyhood that the customers will buy the product sold to them. By clustering customers together, companies can also predict the preferences of different customers depending on wether they are in the same cluster. If customer A and B are in the same cluster and customer B prefers a certain product, most likely company A will too because they are in the same cluster, and this way, companies and make reccommendations to customers based on other's preferences.
 
