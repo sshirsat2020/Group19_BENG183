@@ -54,11 +54,14 @@ Summarily, we have 3 stopping criteria:
 We can visualize how the algorithm functions on the following dataset. We have 2 variables, X and Y, across 25 observations shown below. The dataset has been
 visualized as a 25 point scatterplot.
 
+<img src="img/dataset.png" width="1200" height="500" />
 
 Let's look at the first iteration of the algorithm
+
+<img src="img/Iteration1.png" width="1200" height="500" />
+
 1. Three centroids have been selected randomly from our dataset
-2. Datapoints are partitioned into clusters based on which centroid they are nearest to
-For a given datapoint $D$, the distance to a centroid $C$ is calculated by:
+2. Datapoints are partitioned into clusters based on which centroid they are nearest to. For a given datapoint $D$, the distance to a centroid $C$ is calculated by:
 $$dist = \sqrt{(D.x - C.x)^2 + (D.y - C.y)^2}$$
 3. Centroids move from their initial position to a new one, determined by the mean location of the datapoints within their cluster.
 For a given cluster of $n$ datapoints, the coordinate position of the new centroid is given by:
