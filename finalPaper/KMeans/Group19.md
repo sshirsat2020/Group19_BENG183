@@ -68,3 +68,11 @@ For a given cluster of $n$ datapoints, the coordinate position of the new centro
 $$\left( {{\displaystyle\sum_{1}^{n}D.x_n} \over n}, {{\displaystyle\sum_{1}^{n}D.y_n} \over n} \right)$$
 where $D.x_n$ and $D.y_n$ are the $x$ and $y$ coordinates of the $n^{th}$ datapoint respectively.
 4. We have our new centroids and are ready to iterate again
+
+Here are the second, third, and fourth iterations, though not to the same depth shown above.
+
+<img src="img/iteration2.png" width="450" height="225" />
+<img src="img/iteration3.png" width="450" height="225" />
+<img src="img/iteration4.png" width="450" height="225" />
+
+Note that between the third and fourth iterations, none of our datapoints have moved into a new cluster. Therefore, we've satisfied our stopping criteria and the algorithm terminates. We've now successfully partitioned the 25 datapoints into one of either the red, green, or blue groups.
