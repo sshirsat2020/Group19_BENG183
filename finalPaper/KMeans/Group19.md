@@ -1,3 +1,10 @@
+1. [Overview](#1)
+2. [The Algorithm](#2)
+3. [Stopping Criteria](#3)
+4. [Algorithm in Practice](#4)
+5. [Packages and Tools to Implement K Means](#5)
+6. [References](#6)
+
 # Introduction to K-Means Clustering
 ### By Shruti Shirsathe, Minh-Son Tran, and Lily Steiner
 ## Overview
@@ -124,3 +131,9 @@ fviz_cluster(km.res, iris[, -5], ellipse.type = "norm")
 The data visualization looks like the following:
 
 <img src="img/rkmeans.png" width="450" height="225" />
+
+* * *
+## References
+[1]
+[2] https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+[3] https://rpkgs.datanovia.com/factoextra/reference/fviz_cluster.html
