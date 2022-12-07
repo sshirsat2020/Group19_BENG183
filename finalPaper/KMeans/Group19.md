@@ -36,24 +36,26 @@ Applications are to either:
 ## The Algorithm<a name="2"></a>
 ![Algorithm](img/algorithm.png)
 
-1. Choose a value K as the number of cluster centers and set the cluster centers randomly. One way to choose K is by using the elbow method
-2. Perform K-means clustering with different values of K. For each k, we calculate average distances to the centroid across all data points.
-3. Plot these points and find the point where the average distance from the centroid falls suddenly (“Elbow”)
-4. Now that we chose k and the initial centroids are chosen, we then 
-calculate the distances between all the points in the data and the centroids, then group the points with the cluster center they are closest to.
-5. Now we recalculate the centroid of these new clusters by finding the new center of gravity of the clusters; then group the data points to the new nearest centroid as we did before. 
-6. We then repeat these steps until the centroid positions remain the same; if so, the algorithm has completed and you’ve found your clusters.
+1. Choose a value K as the number of cluster centers and set the cluster centers randomly. One way to choose K is by using the elbow method (below)
+2. Once k and the initial centroids are chosen, we then calculate the distances between all the points in the data and the centroids, then group the points with the cluster center they are closest to.
+3. Now we recalculate the centroid of these new clusters by finding the new center of gravity of the clusters; then group the data points to the new nearest centroid as we did before. 
+4. We then repeat these steps until the centroid positions remain the same; if so, the algorithm has completed and you’ve found your clusters.
 
 ## Parameters & How to Choose Them <a name="3"></a>
 The primary parameter for the algorithm is k, the number of clusters. Choosing an appropriate k value is essential for accurate clustering. To choose k, we can perform what is known as the "elbow" method. 
 
-1. Perform K-means clustering with differing values of K. 2. 2. For each of the K values, we calculate average distances to the centroid across all data points. The specific distance metric used is WCSS ( Within-Cluster Sum of Square ). To do this, calculate the  the sum of squared distance between each point and the centroid in a cluster.
+1. Perform K-means clustering with differing values of K. 
+2. For each of the K values, we calculate average distances to the centroid across all data points. The specific distance metric used is WCSS ( Within-Cluster Sum of Square ). To do this, calculate the  the sum of squared distance between each point and the centroid in a cluster.
 3. Plot the WCSS vs K-value and find the point where the average distance from the centroid falls suddenly (“Elbow”). This should be approximately what K-value to use. 
 
 <p align="center">
 <img src="img/elbow.png" width="600" height="300" />
 </p>
 
+Additionally, it's important to consider the following when implementing the algorithm:
+- What type of distance metric you plan to use
+- What the max iterations of the algorithm should be set to (if convergence continues to not be reached)
+- How many seeds to use (how many times to run the algorithm with a unique set of starting parameters)
 
 ## Stopping Criteria<a name="3"></a>
 As mentioned above, the algorithm typically terminates when centroid positions remain the same from one iteration to the next. In terms of the data, 
