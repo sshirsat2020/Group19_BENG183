@@ -44,6 +44,17 @@ calculate the distances between all the points in the data and the centroids, th
 5. Now we recalculate the centroid of these new clusters by finding the new center of gravity of the clusters; then group the data points to the new nearest centroid as we did before. 
 6. We then repeat these steps until the centroid positions remain the same; if so, the algorithm has completed and you’ve found your clusters.
 
+## Parameters & How to Choose Them <a name="3"></a>
+The primary parameter for the algorithm is k, the number of clusters. Choosing an appropriate k value is essential for accurate clustering. To choose k, we can perform what is known as the "elbow" method. 
+
+1. Perform K-means clustering with differing values of K. 2. 2. For each of the K values, we calculate average distances to the centroid across all data points. The specific distance metric used is WCSS ( Within-Cluster Sum of Square ). To do this, calculate the  the sum of squared distance between each point and the centroid in a cluster.
+3. Plot the WCSS vs K-value and find the point where the average distance from the centroid falls suddenly (“Elbow”). This should be approximately what K-value to use. 
+
+<p align="center">
+<img src="img/elbow.png" width="600" height="300" />
+</p>
+
+
 ## Stopping Criteria<a name="3"></a>
 As mentioned above, the algorithm typically terminates when centroid positions remain the same from one iteration to the next. In terms of the data, 
 this is equivalent to the all datapoints remaining within the same cluster after an iteration, as their center of gravity would remain the same.
@@ -60,6 +71,8 @@ Summarily, we have 3 stopping criteria:
 2. Clusters do not change
 3. Maximum iterations have been attempted
 
+* * *
+
 ## Algorithm in Practice<a name="4"></a>
 
 We can visualize how the algorithm functions on the following dataset. We have 2 variables, X and Y, across 25 observations shown below. The dataset has been
@@ -75,9 +88,8 @@ Let's look at the first iteration of the algorithm
 2. Datapoints are partitioned into clusters based on which centroid they are nearest to. For a given datapoint $D$, the distance to a centroid $C$ is calculated by:
 $$dist = \sqrt{(D.x - C.x)^2 + (D.y - C.y)^2}$$
 3. Centroids move from their initial position to a new one, determined by the mean location of the datapoints within their cluster.
-For a given cluster of $n$ datapoints, the coordinate position of the new centroid is given by:
+For a given cluster of $n$ datapoints, the coordinate position of the new centroid is given by the following, where $D.x_n$ and $D.y_n$ are the $x$ and $y$ coordinates of the $n^{th}$ datapoint respectively.
 $$\left( {{\displaystyle\sum_{1}^{n}D.x_n} \over n}, {{\displaystyle\sum_{1}^{n}D.y_n} \over n} \right)$$
-where $D.x_n$ and $D.y_n$ are the $x$ and $y$ coordinates of the $n^{th}$ datapoint respectively.
 4. We have our new centroids and are ready to iterate again
 
 Here are the second, third, and fourth iterations, though not to the same depth shown above.
