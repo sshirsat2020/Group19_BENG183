@@ -18,7 +18,7 @@ The two main types, Supervised and Unsupervised Machine Learning are defined as 
 * **Supervised:** Algorithm that requires an input of data, and labels for classification. In the end, it is used to make predictions and classify data.
 * **Unsupervised:** Algorithm that requires only an input of data and no labels. It is used to understand the relationships between points in the dataset.
 <p align="center">
-<img src="img/unsupervised-learning.png" width="600" height="300" />
+<img src="img/unsupervised-learning.png" width="450" height="300" />
 </p>
 [1] In this image, the input data includes information with different animals without any labels for what they are; the unsupervised algorithm takes this input and groups the data into 3 different clusters based on how closely the data is related to one another. Devin Pickell, "Supervised vs Unsupervised Learning – What's the Difference?".
 
@@ -49,7 +49,7 @@ The primary parameter for the algorithm is k, the number of clusters. Choosing a
 3. Plot the WCSS vs K-value and find the point where the average distance from the centroid falls suddenly (“Elbow”). This should be approximately what K-value to use. 
 
 <p align="center">
-<img src="img/elbow.png" width="600" height="300" />
+<img src="img/elbow.png" width="450" height="300" />
 </p>
 
 Additionally, it's important to consider the following when implementing the algorithm:
@@ -131,7 +131,7 @@ plt.show()
 We can plot our clusters through pyplot:
 
 <p align="center">
-<img src="img/scatter.png" width="450" height="225" />
+<img src="img/scatter.png" width="380" height="225" />
 </p>
 ### R → built-in function
 
